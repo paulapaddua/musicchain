@@ -1,13 +1,35 @@
 import React from 'react';
 
+const options = [
+  {
+    href: '#',
+    label: 'Home',
+  },
+  {
+    href: '#',
+    label: 'Melhores Músicas',
+  },
+  {
+    href: '#',
+    label: 'Notificações',
+  },
+  {
+    href: '#',
+    label: 'Explorar',
+  },
+];
+
 const Sidebar = () => {
   return (
-    <div className="w-64 bg-gray-800 text-white h-screen p-4">
+    <div className='w-52 bg-gray-800 text-white p-4'>
       <ul>
-        <li className="mb-4"><a href="#">Home</a></li>
-        <li className="mb-4"><a href="#">Melhores Músicas</a></li>
-        <li className="mb-4"><a href="#">Notificações</a></li>
-        <li className="mb-4"><a href="#">Explorar</a></li>
+        {options.map((opt) => {
+          return (
+            <li className='hover:bg-slate-700 p-2 rounded-md'>
+              <a href={opt.href}>{opt.label}</a>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

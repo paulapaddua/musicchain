@@ -7,11 +7,11 @@ import CreatePost from './components/CreatePost';
 
 const App = () => {
   return (
-    <div className="flex">
+    <div className="flex h-[100%]">
       <Sidebar />
-      <div className="flex-1">
+      <div className="flex-1 h-[100%]">
         <Navbar />
-        <div className="container mx-auto p-4">
+        <div className="container p-4 bg-slate-200 flex flex-col h-[100%] w-[100%]">
           <CreatePost />
           <Post />
           <Post />
